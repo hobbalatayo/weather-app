@@ -1,83 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Weather App</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <main>
+      <header>
+        <h1>Weather App</h1>
+        <p>Check the weather anywhere</p>
+      </header>
 
-        <header>
-            <h1>Weather App</h1>
-            <p>Check the weather anywhere</p>
-        </header>
+      <form>
+        <input id="cityInput" type="text" placeholder="Enter a city..." />
 
-        <form>
-            <input
-                id="cityInput"
-                type="text"
-                placeholder="Enter a city..."
-            >
+        <button type="submit">
+          <span class="button-text">Search</span>
+          <span class="spinner"></span>
+        </button>
+      </form>
 
-            <button type="submit">
-                <span class="button-text">Search</span>
-                <span class="spinner"></span>
-            </button>
-        </form>
+      <p id="errorMessage"></p>
 
-        <p id="errorMessage"></p>
+      <section id="weatherResults">
+        <h2>Weather Information</h2>
 
-        <section id="weatherResults">
+        <div class="weather-card">
+          <div id="weatherIcon"></div>
 
-            <h2>Weather Information</h2>
+          <p id="location"></p>
 
-            <div class="weather-card">
+          <p id="temperature"></p>
 
-                <div id="weatherIcon"></div>
+          <p id="description"></p>
 
-                <p id="location"></p>
-
-                <p id="temperature"></p>
-
-                <p id="description"></p>
-
-                <div class="weather-details">
-
-                    <div>
-                        <span>💨</span>
-                        <small>Wind</small>
-                        <p id="windSpeed"></p>
-                    </div>
-
-                    <div>
-                        <span>💧</span>
-                        <small>Humidity</small>
-                        <p id="humidity"></p>
-                    </div>
-
-                    <div>
-                        <span>🌡️</span>
-                        <small>Feels Like</small>
-                        <p id="feelsLike"></p>
-                        </div>
-
-                </div>
-
+          <div class="weather-details">
+            <div>
+              <span>💨</span>
+              <small>Wind</small>
+              <p id="windSpeed"></p>
             </div>
 
-        </section>
+            <div>
+              <span>💧</span>
+              <small>Humidity</small>
+              <p id="humidity"></p>
+            </div>
 
+            <div>
+              <span>🌡️</span>
+              <small>Feels Like</small>
+              <p id="feelsLike"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="forecast">
+        <h2>7-Day Forecast</h2>
+
+        <div id="forecastList"></div>
+      </section>
     </main>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
